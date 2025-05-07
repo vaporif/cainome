@@ -39,3 +39,12 @@ jobs:
           command: |
             cargo test --workspace --all-features
             cargo run --example structs --all-features
+
+      - name: check deny
+        run: cargo xtask deny
+
+      - name: check docs
+        run: cargo xtask doc
+
+      - name: check docs
+        run: cargo xtask unused-deps
